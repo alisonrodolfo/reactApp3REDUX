@@ -15,6 +15,6 @@ When you're ready to see everything that Expo provides (or if you want to use yo
 
 <p align="center">
 	<br>
-	<img src="data/printM.jpg"/ >
+	<img src="prints/printM.jpg"/ >
       <br>
 </p>
