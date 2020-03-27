@@ -13,14 +13,14 @@ class TodoForm extends React.Component {
 
 	onPress() {
 		const { todo } = this.props;
-		if (todo.id&&todo.text!=""){
-			console.log("vazio"+todo.text);
+		if (todo.id && todo.text != "") {
+			console.log("vazio" + todo.text);
 			return this.props.dispatchUpdateTodo(todo);
-		}else if (todo.id&&todo.text==""){
+		} else if (todo.id && todo.text == "") {
 			this.props.dispatchDeleteTodo(todo.id);
 		}
 		const { text } = todo;
-		if(text!=""){
+		if (text != "") {
 			this.props.dispatchAddTodo(capitalize(text));
 		}
 	}
@@ -49,14 +49,18 @@ class TodoForm extends React.Component {
 const capitalize = (s) => {
 	if (typeof s !== 'string') return ''
 	return s.charAt(0).toUpperCase() + s.slice(1)
-  }
+}
 
 const styles = StyleSheet.create({
 	formContainer: {
 		flexDirection: 'row',
+		
 	},
 	inputContainer: {
-		flex: 4
+		flex: 4,
+		borderWidth: 2,  // size/width of the border
+		borderColor: 'lightgrey',  // color of the border
+		
 	},
 	buttonContainer: {
 		flex: 1
